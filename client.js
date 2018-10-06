@@ -17,7 +17,10 @@ $(document).ready(onReady);
 
 function onReady() {
   console.log('JQ');
-  $('#sumbitButton').on('click', addEmployee);
+// submit button 
+    $('#sumbitButton').on('click', addEmployee);
+// delete button
+    $('#addedEmployees').on('click','.deleteEmployee', removeEmployeesButton);
 }
 
 // Add Employee Function 
@@ -57,6 +60,21 @@ function appendEmployeeList() {
     }
 }
 
+// removing employees 
+function removeEmployeesButton(){
+    console.log('removing');
+    let selectedItem = $(this).parent().text();
+    console.log(selectedItem);
+    for(let i = 0; i < employeesArray.length; i++) {
+        if(selectedItem.includes(employeesArray[i].firstName)){
+            console.log('deleted');
+            employeesArray.splice(i, 1);
+            $(this).parent().remove();
+            return true;
+        }   
+    }
+}
+
 // indivdual monthly cost array
 let indivdualCostArray=[];
 
@@ -78,6 +96,5 @@ function calcuTotalMonthlyCost (){
         let element= $('#totalMonlthyCost');
         element.empty();
         element.append('<h3>'+ monthlyCost +'</h3>'); 
+        }
     }
-}
-
