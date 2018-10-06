@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Salary Calculator</title>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="client.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header><h1>Monlthy Costs Calculator</h1></header>
+    <h2>Add Employees</h2>
+    <form>
+        <label for="title">First Name:</label>
+        <input id="firstName" type=“text” /> 
+        <label for="title">Last Name:</label>
+        <input id="lastName"type=“text” />
+        <label for="title">ID Number:</label>
+        <input id="idNumber" type=“number” />
+        <label for="title">Job Title:</label>
+        <input id="jobTitle" type=“text” />
+        <label for="title">Annual Salary:</label>
+        <input id="annualSalary" type=“number” />
+        <button id="sumbitButton">Sumbit Button</button>
+    </form>
+    <h2>Employees:</h2>
+    <section>
+    <ul id="addedEmployees">
+    </ul>
+    </section>
+    <h2>Total Monlthy Cost:</h2>
+    <section id="totalMonlthyCost">
+<!--jquery here-->
+    </section>
+</body>
+</html>
