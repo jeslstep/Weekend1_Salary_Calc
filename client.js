@@ -110,8 +110,10 @@ function calcuTotalMonthlyCost (){
 // appending total monthly cost to dom
         let element= $('#totalMonlthyCost');
         element.empty();
-        element.append('<h3>'+ totalMonthlyCost +'</h3>'); 
+        element.append('<h3>'+ totalMonthlyCost +'</h3>');
+        if (totalMonthlyCost<20000){
         $("#totalMonlthyCost").css("background-color", "red");
+        }
 }
 
 
