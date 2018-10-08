@@ -53,8 +53,9 @@ function appendEmployeeList() {
     let element = $('#addedEmployees');
     element.empty();
     for(let employee of employeesArray) {
-        element.append(`<li>` + employee.firstName + ` ` + employee.lastName + ` ` + 
-        employee.idNumber + employee.jobTitle + ` ` + employee.annualSalary + ` ` + 
+        element.append(`<li>` +`First Name:`+ employee.firstName+ `, ` + ` ` +`Last Name:`+
+         employee.lastName+ `, ` + ` ` + `ID Number:`+employee.idNumber+ `, ` +`Job Title:`+ employee.jobTitle
+         + `, ` + ` ` + `Annual Salary:`+employee.annualSalary + ` ` + 
         `<button class="deleteEmployee">Delete Employee</button>
         </li>`);
     }
