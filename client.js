@@ -111,6 +111,7 @@ function calcuTotalMonthlyCost (){
         let element= $('#totalMonlthyCost');
         element.empty();
         element.append('<h3>'+ totalMonthlyCost +'</h3>'); 
+        $("#totalMonlthyCost").css("background-color", "red");
 }
 
 
