@@ -95,7 +95,11 @@ function calcuTotalMonthlyCost (){
     let yearSal = $('#annualSalary').val();
     console.log('this employess yearly salary is', yearSal);
     let individualMonthlyCost= yearSal/12;
+    if (individualMonthlyCost !== 0){
+    console.log('pushing',individualMonthlyCost);
     totMonthCostArray.push(individualMonthlyCost);
+    console.log('totMonthCostArray', totMonthCostArray);
+    }
     console.log('this employee costs',individualMonthlyCost,'each month');
 // caluculates the total cost of all the employess added
     let totalMonthlyCost = 0;
